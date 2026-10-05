@@ -17,4 +17,10 @@ class Book extends Model
         'description',
         'cover_image',
     ];
+
+    public function copies() {
+        return $this->hasMany(BookCopy::class);
+    }
 }
+
+

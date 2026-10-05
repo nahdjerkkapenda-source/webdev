@@ -6,5 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class BookCopy extends Model
 {
-    //
+    protected $fillable = [
+        'book_id',
+        'accession_number',
+        'status',
+        'condition',
+    ];
+
+    public function book() {
+        return $this->belongsTo(Book::class);
+    }
 }
+
