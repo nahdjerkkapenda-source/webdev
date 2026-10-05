@@ -1,0 +1,21 @@
+#passwordMessage {
+    margin-top: -1rem;
+}
+
+#password-strength-meter {
+    width: 100%;
+    height: 10px;
+    margin-top: -0.7rem;
+}
+
+#password-requirements-description {
+    margin: 15px;
+}
+
+#confirm-password-message {
+    margin-top: -1rem;
+}
+
+#confirm-password {
+    margin-bottom: 1.5rem;
+}

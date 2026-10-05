@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dashboard</title>
+    <title>Settings</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="books.css" class="">
+
 </head>
-
-<body>
     @include('partials.sidebar')
-    <main class="">
-        
-        <h1>Welcome, {{ $user->name }}</h1>
-
-    </main>
-    
-</body>
+    <body>
+        <main>
+            <a href="/logout"><button>logout</button></a>
+        </main>
+    </body>
 </html>

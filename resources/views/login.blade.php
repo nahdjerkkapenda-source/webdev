@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/auth.css">
 </head>
-<body>
-    <form action="/login" method="POST">
+<body class="auth-body">
+    <form action="/login" method="POST" class="auth-form">
         @csrf
         <h1>Login</h1>
         <label for="email">Email:</label>
