@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create an Account</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/auth.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/auth.css">
 </head>
 
 <body class="auth-body">
     <form action="/register" method="POST" class="auth-form">
         @csrf
-        <h1>Create an Account</h1>
-        <!--<p class="description">Create an authorized account to access our services.</p>-->
+        <h1>Sign Up</h1>
+        <p class="auth-description">Create an authorized account.</p>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -35,44 +35,10 @@
         <input type="password" id="confirm-password" name="confirm_password" required>
         <p id="passwordMessage"></p>                                        <!--@if (session('error'))<p class="error">{{ session('error') }}</p>@endif-->
         
-        <button type="submit" id="registerButton">Register</button>
+        <button type="submit" id="register-button">Create Account</button>
         
-        <p style="text-align: center;">Already have an account? <a href="/login">Login here</a>.</p>
-        
-        <script>
-            const name = document.getElementById('name');
-            const email = document.getElementById('email');
-            const password = document.getElementById('password');
-            const confirmPassword = document.getElementById('confirm_password');
-            const message = document.getElementById('passwordMessage');
-            const registerButton = document.getElementById('registerButton');
-
-            registerButton.disabled = true;
-            function checkForm() {
-
-                const allFieldsFilled = name.value !== '' && email.value !== '' && password.value !== '' && confirmPassword.value !== '';
-                const passwordsMatch = password.value === confirmPassword.value;
-
-                if (password.value === '' || confirmPassword.value === '') {
-                    message.textContent = '';
-                } else if (confirmPassword.value === password.value) {
-                    message.textContent = 'Passwords match.';
-                    message.className = 'success';
-                } else {
-                    message.textContent = 'Passwords do not match.';
-                    message.className = 'error';
-                }
-
-                registerButton.disabled = !(allFieldsFilled && passwordsMatch);
-            }
-            name.addEventListener('input', checkForm);
-            email.addEventListener('input', checkForm);
-            password.addEventListener('input', checkForm);
-            confirmPassword.addEventListener('input', checkForm);
-        </script>
-
-    
-        
+        <p style="text-align: center; margin-top: 1rem;">Already have an account? <a href="/login">Login here</a>.</p>
     </form>
+    <script src="/js/register.js"></script>
 </body>
 </html>

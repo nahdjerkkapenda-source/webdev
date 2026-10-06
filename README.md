@@ -82,11 +82,22 @@ php artisan migrate
 
 This creates the tables required by the application.
 
-### 7. Start the Laravel development server
+### 7. Storage Setup
+
+This project uses Laravel's public storage system for uploaded book cover images.
+
+After cloning the project, run:
+
+```bash
+php artisan storage:link
+```
+
+### 8. Start the Laravel development server
 
 ```bash
 php artisan serve
 ```
+
 
 ## Updating the Project
 

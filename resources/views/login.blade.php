@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/auth.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/auth.css">
 </head>
 <body class="auth-body">
     <form action="/login" method="POST" class="auth-form">
         @csrf
-        <h1>Login</h1>
+        <h1>Sign in</h1>
+        <p class="auth-description">Sign in to your account.</p>
+
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         
@@ -26,8 +28,9 @@
         </div>
 
         <button type="submit">Login</button>
-        <p>Forgot your password? <a href="/reset-password">Reset it here</a>.</p>
-        <p>Don't have an account? <a href="/register">Register here</a>.</p>
+
+        <!-- <p>Forgot your password? <a href="/reset-password">Reset it here</a>.</p> -->
+        <p style="text-align: center; margin-top: 1rem;">Don't have an account? <a href="/register">Register here</a>.</p>
     </form>
 </body>
 </html>
