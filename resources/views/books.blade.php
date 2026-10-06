@@ -25,7 +25,7 @@
                 <div class="dropdowns-wrapper">
                     <label for="category" class="dropdown-label">Filter by:</label>
 
-                    <select name="filter" class="dropdown-category">
+                    <select name="filter" class="dropdown-category" onchange="this.form.submit()">
                         <option value="">Category</option>
                         <option value="fiction" {{ request('filter') == 'fiction' ? 'selected' : '' }}>Fiction</option>
                         <option value="non-fiction" {{ request('filter') == 'non-fiction' ? 'selected' : '' }}>Non-Fiction</option>
@@ -33,23 +33,7 @@
                         <option value="children-&-young-adults" {{ request('filter') == 'children-&-young-adults' ? 'selected' : '' }}>Children & Young Adult</option>
                     </select>
 
-                    <!--<select name="status" class="dropdown-status">
-                        <option value="">Status</option>
-                        <option value="available">Available</option>
-                        <option value="borrowed">Borrowed</option>
-                        <option value="reserved">Reserved</option>
-                        <option value="lost">Lost</option>
-                    </select>
-
-                    <select name="condition" class="dropdown-condition">
-                        <option value="">Condition</option>
-                        <option value="new">New</option>
-                        <option value="good">Good</option>
-                        <option value="fair">Fair</option>
-                        <option value="poor">Poor</option>
-                    </select>-->
-
-                    <button type="submit" class="button-apply">Apply</button>
+                    <!--<button type="submit" class="button-apply">Apply</button>-->
                 </div>
             </form>
                         
@@ -79,29 +63,17 @@
                 <label for="number">Number of copies:</label>
                 <input type="number" name="copies" value="1" min="1">
                 
-
-
-                <!--<select name="status">
-                    <input type="text" placeholder="Accession Number" name="accession_number">
-                    <option value="available">Available</option>
-                    <option value="borrowed">Borrowed</option>
-                    <option value="reserved">Reserved</option>
-                    <option value="lost">Lost</option>
-                </select>
-                <select name="condition">
-                    <option value="new">New</option>
-                    <option value="good">Good</option>
-                    <option value="fair">Fair</option>
-                    <option value="poor">Poor</option>
-                </select>
-                -->
-                <button>Save Book</button>
+                <div class="button-wrapper">
                 <button type="button" id="close-modal-button">Cancel</button>
+                <button class=button-save-book>Save Book</button>
+                </div>
+                
             </form>
             </div>
         </header>  
 
         <section class="books-section">
+
             @foreach ($books as $book)
 
             <div class="book-card">
@@ -135,3 +107,36 @@
     <script src="/js/books.js"></script>
 </body>
 </html>
+
+ <!--<select name="status" class="dropdown-status">
+                        <option value="">Status</option>
+                        <option value="available">Available</option>
+                        <option value="borrowed">Borrowed</option>
+                        <option value="reserved">Reserved</option>
+                        <option value="lost">Lost</option>
+                    </select>
+
+                    <select name="condition" class="dropdown-condition">
+                        <option value="">Condition</option>
+                        <option value="new">New</option>
+                        <option value="good">Good</option>
+                        <option value="fair">Fair</option>
+                        <option value="poor">Poor</option>
+                    </select>-->
+
+
+
+<!--<select name="status">
+                    <input type="text" placeholder="Accession Number" name="accession_number">
+                    <option value="available">Available</option>
+                    <option value="borrowed">Borrowed</option>
+                    <option value="reserved">Reserved</option>
+                    <option value="lost">Lost</option>
+                </select>
+                <select name="condition">
+                    <option value="new">New</option>
+                    <option value="good">Good</option>
+                    <option value="fair">Fair</option>
+                    <option value="poor">Poor</option>
+                </select>
+                -->

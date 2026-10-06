@@ -21,8 +21,8 @@
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
-        <meter max="8" id="password-strength-meter"></meter>
-        <label>Password Strength:</label>
+        <meter min="0" max="5" value="0" id="password-strength-meter"></meter>
+        <label>Password Strength: <span id="password-strength-text">Weak</span></label>
         <ul id="password-requirements-description">
             <li id="length" class="invalid">At least 8 characters</li>
             <li id="uppercase" class="invalid">At least one uppercase letter</li>

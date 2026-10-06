@@ -15,7 +15,6 @@ p.auth-description {
 
 #password-requirements-description {
     margin: 15px;
-    opacity: 0.5;
 }
 
 #confirm-password-message {
@@ -25,4 +24,24 @@ p.auth-description {
 #register-button {
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+#password-requirements-description .invalid {
+    color: gray;
+}
+
+#password-requirements-description .valid {
+    color: green;
+}
+
+#password-strength-text {
+    font-weight: bold;
+}
+
+#passwordMessage.success {
+    color: green;
+}
+
+#passwordMessage.error {
+    color: red;
 }

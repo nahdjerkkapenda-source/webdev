@@ -18,6 +18,8 @@ body {
 body.with-sidebar {
     display: grid;
     grid-template-columns: max-content 1fr;
+    height: 100vh;
+    overflow: hidden;
 }
 
 body.auth-body {
@@ -31,11 +33,14 @@ body.auth-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Spreads nav links top/bottom if needed */
+    height: 100vh;
     margin-inline-start: 30px;
     margin-inline-end: 30px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     background-color: #fff;
+    padding-bottom: 30px;
+    
 }
 
 main {
@@ -44,6 +49,9 @@ main {
     justify-content: center; /* Vertical alignment */
     align-items: center;     /* Horizontal alignment */
     gap: 1rem;               /* Clean spacing between inputs, buttons, and h1 */
+    overflow-y: auto;   /* Makes main scrollable when content exceeds viewport height */
+    position: relative;
+    padding-bottom: 5rem; 
 }
 
 
